@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>CSUBU Lecturers</title>
+    <style>
+    .avatar {
+        vertical-align: middle;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+    }
+    body {
+        font-family: 'Itim', cursive;
+    }
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        background-color: #f1f1f1;
+        padding: 20px;
+        font-family: Arial;
+    }
+
+    /* Center website */
+    .main {
+        max-width: 1000px;
+        margin: auto;
+    }
+
+    h1 {
+        font-size: 50px;
+        word-break: break-all;
+    }
+
+    .row {
+        margin: 8px -16px;
+    }
+
+    /* Add padding BETWEEN each column */
+    .row,
+    .row > .column {
+        padding: 8px;
+    }
+
+    /* Create four equal columns that floats next to each other */
+    .column {
+        float: left;
+        width: 25%;
+    }
+
+    /* Clear floats after rows */ 
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    /* Content */
+        .content {
+        background-color: white;
+        padding: 10px;
+    }
+
+    /* Responsive layout - makes a two column-layout instead of four columns */
+    @media screen and (max-width: 900px) {
+    .column {
+        width: 50%;
+    }
+    }
+
+    /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+    }
+    }
+    </style>
+  </head>
+  
+  <body background="http://picsum.photos/1024/1024?grayscale">
+    <div>
+        <h1> gallery Application</h1>
+    </div>
+    <div class="row">
+  <div class="column">
+    <div class="content">
+      <img src="http://picsum.photos/100" alt="Mountains">
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+    <img src="http://picsum.photos/100" alt="Lights">
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+    <img src="http://picsum.photos/100" alt="Nature">
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+    <img src="http://picsum.photos/100" alt="Mountains">
+    </div>
+  </div>
+    <footer>
+      Node <script>document.write(process.versions.node)</script>,
+      Chrome <script>document.write(process.versions.chrome)</script>,
+      and Electron <script>document.write(process.versions.electron)</script>.
+    </footer>
+  </body>
+</html>
