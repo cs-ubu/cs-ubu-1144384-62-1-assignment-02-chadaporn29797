@@ -1,113 +1,133 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>CSUBU Lecturers</title>
-    <style>
-    .avatar {
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.avatar {
         vertical-align: middle;
         width: 50px;
         height: 50px;
         border-radius: 50%;
-    }
-    body {
-        font-family: 'Itim', cursive;
-    }
-    * {
-        box-sizing: border-box;
-    }
+}
+* {
+  box-sizing: border-box;
+}
 
-    body {
-        background-color: #f1f1f1;
-        padding: 20px;
-        font-family: Arial;
-    }
+body {
+  margin: 0;
+  font-family: Itim;
+}
 
-    /* Center website */
-    .main {
-        max-width: 1000px;
-        margin: auto;
-    }
+/* The grid: Four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 10%;
+  padding: 10px;
+}
 
-    h1 {
-        font-size: 50px;
-        word-break: break-all;
-    }
+/* Style the images inside the grid */
+.column img {
+  opacity: 0.8; 
+  cursor: pointer; 
+}
 
-    .row {
-        margin: 8px -16px;
-    }
+.column img:hover {
+  opacity: 1;
+}
 
-    /* Add padding BETWEEN each column */
-    .row,
-    .row > .column {
-        padding: 8px;
-    }
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 
-    /* Create four equal columns that floats next to each other */
-    .column {
-        float: left;
-        width: 25%;
-    }
+/* The expanding image container */
+.container {
+  position: relative;
+  display: none;
+}
 
-    /* Clear floats after rows */ 
-    .row:after {
-        content: "";
-        display: table;
-        clear: both;
-    }
+/* Expanding image text */
+#imgtext {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  color: white;
+  font-size: 20px;
+}
 
-    /* Content */
-        .content {
-        background-color: white;
-        padding: 10px;
-    }
+/* Closable button inside the expanded image */
+.closebtn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
+}
+</style>
+</head>
+<body background="https://cdn.dribbble.com/users/2855975/screenshots/5610434/schermafbeelding_2018-11-27_om_13.36.10_2x.png">
 
-    /* Responsive layout - makes a two column-layout instead of four columns */
-    @media screen and (max-width: 900px) {
-    .column {
-        width: 50%;
-    }
-    }
+<div style="text-align:center">
+  <h1> Gallery Application</h1>
+</div>
 
-    /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-    @media screen and (max-width: 600px) {
-    .column {
-        width: 100%;
-    }
-    }
-    </style>
-  </head>
-  
-  <body background="http://picsum.photos/1024/1024?grayscale">
-    <div>
-        <h1> gallery Application</h1>
-    </div>
-    <div class="row">
+<!-- The four columns -->
+<div class="row">
   <div class="column">
-    <div class="content">
-      <img src="http://picsum.photos/100" alt="Mountains">
-    </div>
+    <img class="avatar" src="https://images4.alphacoders.com/963/963428.jpg" alt="noface1" style="width:100%" onclick="myFunction(this);">
   </div>
   <div class="column">
-    <div class="content">
-    <img src="http://picsum.photos/100" alt="Lights">
-    </div>
+    <img class="avatar" src="https://i.pinimg.com/originals/21/47/f2/2147f2e91fce6b5ea5ac9af3c9eb7957.jpg" alt="noface2" style="width:100%" onclick="myFunction(this);">
   </div>
   <div class="column">
-    <div class="content">
-    <img src="http://picsum.photos/100" alt="Nature">
-    </div>
+    <img class="avatar" src="https://cdn.dribbble.com/users/1365253/screenshots/4011433/anime_daily_challenge_-_no_face.jpg" alt="noface3" style="width:100%" onclick="myFunction(this);">
   </div>
   <div class="column">
-    <div class="content">
-    <img src="http://picsum.photos/100" alt="Mountains">
-    </div>
+    <img class="avatar" src="https://pbs.twimg.com/media/D4cR9zVW4AETzBB.jpg" alt="noface4" style="width:100%" onclick="myFunction(this);">
   </div>
-    <footer>
-      Node <script>document.write(process.versions.node)</script>,
-      Chrome <script>document.write(process.versions.chrome)</script>,
-      and Electron <script>document.write(process.versions.electron)</script>.
+  <div class="column">
+    <img class="avatar" src="https://picfiles.alphacoders.com/100/10076.png" alt="noface5" style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img class="avatar" src="https://dumielauxepices.net/sites/default/files/estudio-clipart-disney-598278-7879381.jpg" alt="noface6" style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img class="avatar" src="https://i.pinimg.com/originals/21/c2/fd/21c2fd19d46709db727b0791acf78684.jpg" alt="noface7" style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img class="avatar" src="https://data.whicdn.com/images/11330126/large.jpg" alt="noface8" style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img class="avatar" src="https://scontent-ort2-1.cdninstagram.com/vp/518d98f66f514ef677051a158ae1fcf2/5D62E662/t51.2885-15/e35/40066320_1083824661773952_4583921011503832442_n.jpg?_nc_ht=scontent-ort2-1.cdninstagram.com" alt="noface9" style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img class="avatar" src="https://pinimg.icu/wall/0x0/likes-comments-naomi-lord-naomi-lord-on-instagram-no-Ead014d3a30e4f7027a3538a5fbf48267.jpg?t=5cd3e585b74a5" alt="noface10" style="width:100%" onclick="myFunction(this);">
+  </div>
+</div>
+
+<div class="container">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <img id="expandedImg" style="width:90%">
+  <div id="imgtext"></div>
+</div>
+
+<script>
+function myFunction(imgs) {
+  var expandImg = document.getElementById("expandedImg");
+  var imgText = document.getElementById("imgtext");
+  expandImg.src = imgs.src;
+  imgText.innerHTML = imgs.alt;
+  expandImg.parentElement.style.display = "block";
+}
+</script>
+<footer>
+      <script>document.write(process.versions.node)</script>
+     <script>document.write(process.versions.chrome)</script>
+     <script>document.write(process.versions.electron)</script>
     </footer>
-  </body>
+</body>
 </html>
